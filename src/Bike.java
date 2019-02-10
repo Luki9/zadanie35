@@ -3,12 +3,12 @@ import java.util.Objects;
 class Bike {
 
    private String brand;
-   private int wheels;
+   private String wheels;
 
 
 
 
-    public Bike(String brand, int wheels) {
+    public Bike(String brand, String wheels) {
         this.brand = brand;
         this.wheels = wheels;
     }
@@ -24,11 +24,11 @@ class Bike {
         this.brand = brand;
     }
 
-    public int getWheels() {
+    public String getWheels() {
         return wheels;
     }
 
-    public void setWheels(int wheels) {
+    public void setWheels(String wheels) {
         this.wheels = wheels;
     }
 

@@ -13,7 +13,7 @@ class Main {
         Bike bike3 = new Bike();
 
 
-        System.out.println("Podaj nazwę: ");
+        System.out.println("Podaj markę: ");
         String name1 = scanner.nextLine();
 
         System.out.println("Podaj liczbę kół: ");
@@ -22,7 +22,7 @@ class Main {
         bike1 = new Bike(name1, wheels1);
 
         do {
-            System.out.println("2: Podaj nazwę: ");
+            System.out.println("2: Podaj markę: ");
             String name2 = scanner.nextLine();
 
             System.out.println("2: Podaj liczbę kół: ");
@@ -36,7 +36,7 @@ class Main {
         } while (bike2.equals(bike1));
 
         do {
-            System.out.println("3: Podaj nazwę: ");
+            System.out.println("3: Podaj markę: ");
             String name3 = scanner.nextLine();
 
             System.out.println("3: Podaj liczbę kół: ");
