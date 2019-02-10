@@ -1,11 +1,19 @@
+import java.util.Objects;
+
 class Bike {
 
-    String brand;
-    int wheels;
+   private String brand;
+   private int wheels;
+
+
+
 
     public Bike(String brand, int wheels) {
         this.brand = brand;
         this.wheels = wheels;
+    }
+    public Bike(){
+
     }
 
     public String getBrand() {
@@ -22,5 +30,19 @@ class Bike {
 
     public void setWheels(int wheels) {
         this.wheels = wheels;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Bike)) return false;
+        Bike bike = (Bike) o;
+        return wheels == bike.wheels &&
+                Objects.equals(brand, bike.brand);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(brand, wheels);
     }
 }
