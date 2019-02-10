@@ -37,8 +37,8 @@ class Bike {
         if (this == o) return true;
         if (!(o instanceof Bike)) return false;
         Bike bike = (Bike) o;
-        return wheels == bike.wheels &&
-                Objects.equals(brand, bike.brand);
+        return Objects.equals(brand, bike.brand) &&
+                Objects.equals(wheels, bike.wheels);
     }
 
     @Override
@@ -46,3 +46,4 @@ class Bike {
         return Objects.hash(brand, wheels);
     }
 }
+
