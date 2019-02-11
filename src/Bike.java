@@ -1,18 +1,19 @@
+import java.util.Arrays;
 import java.util.Objects;
+import java.util.Scanner;
 
 class Bike {
 
-   private String brand;
-   private String wheels;
-
-
+    private String brand;
+    private String wheels;
 
 
     public Bike(String brand, String wheels) {
         this.brand = brand;
         this.wheels = wheels;
     }
-    public Bike(){
+
+    public Bike() {
 
     }
 
@@ -30,6 +31,23 @@ class Bike {
 
     public void setWheels(String wheels) {
         this.wheels = wheels;
+    }
+
+     static Bike createBike() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj nazwę");
+        String brand = scanner.nextLine();
+        System.out.println("Podaj liczbę kół");
+        String wheels = scanner.nextLine();
+
+        Bike bike = new Bike(brand, wheels);
+        return bike;
+    }
+
+    static boolean check(Bike[] bikes, Bike bike) {
+        return Arrays.asList(bikes).contains(bike);
+
+
     }
 
     @Override
